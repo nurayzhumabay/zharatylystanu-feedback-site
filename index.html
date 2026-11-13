@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Жаратылыстану ғылымдары факультеті деканына кері байланыс және студенттерге арналған ресми ресурстар.">
+  <meta name="theme-color" content="#0a2f5f">
+  <title>Жаратылыстану ғылымдары факультеті — кері байланыс</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Басты бет">
+        <span class="logo-placeholder" data-logo aria-label="Факультет логотипінің орны"><span>ЛОГО</span></span>
+        <span class="brand-copy">
+          <strong data-university></strong>
+          <small data-faculty></small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Мәзірді ашу</span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Негізгі навигация">
+        <a href="#dean">Декан</a><a href="#feedback">Кері байланыс</a><a href="#documents">Құжаттар</a><a href="#contacts">Байланыс</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="container hero-grid" id="dean">
+        <div class="portrait-wrap reveal">
+          <div class="portrait-placeholder" data-portrait aria-label="Декан портретінің орны">
+            <svg viewBox="0 0 220 260" aria-hidden="true"><circle cx="110" cy="86" r="43"/><path d="M35 245c5-70 35-108 75-108s70 38 75 108z"/></svg>
+            <span>ДЕКАН ПОРТРЕТІ</span>
+          </div>
+          <div class="portrait-note"><span class="status-dot"></span> Сурет кейін қосылады</div>
+        </div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Деканмен ашық диалог</p>
+          <h1>Сіздің пікіріңіз <em>маңызды</em></h1>
+          <p class="lead">Факультетімізді бірге дамытайық! Ұсынысыңыз, сұрағыңыз немесе мәселеңіз болса, осы жерде бөлісе аласыз.</p>
+          <a class="button primary" href="#feedback">Кері байланыс қалдыру <span aria-hidden="true">↓</span></a>
+          <div class="dean-card">
+            <div><span>Декан</span><strong data-dean-name></strong></div>
+            <div class="dean-meta"><span data-dean-title></span><span data-dean-degree></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="container split-heading reveal">
+        <div><p class="eyebrow">Кері байланыс</p><h2>Ойыңызды бізбен бөлісіңіз</h2></div>
+        <p>Өтініштің бағытын таңдап, хабарламаңызды жазыңыз. Міндетті өрістер жұлдызшамен белгіленген.</p>
+      </div>
+      <div class="container form-shell reveal">
+        <form id="feedback-form" novalidate>
+          <div class="field-grid two">
+            <div class="field"><label for="request-type">Өтініш түрі <span>*</span></label><select id="request-type" name="requestType" required><option value="">Таңдаңыз</option><option>Ұсыныс</option><option>Сұрақ</option><option>Мәселе</option><option>Алғыс</option></select><p class="error" id="request-type-error"></p></div>
+            <div class="field"><label for="topic">Тақырып <span>*</span></label><select id="topic" name="topic" required><option value="">Таңдаңыз</option><option>Оқу процесі</option><option>Бағалау</option><option>Студенттік өмір</option><option>Инфрақұрылым</option><option>Басқа</option></select><p class="error" id="topic-error"></p></div>
+          </div>
+          <div class="field"><label for="message">Хабарлама <span>*</span></label><textarea id="message" name="message" rows="6" maxlength="2000" required placeholder="Ұсынысыңызды, сұрағыңызды немесе мәселеңізді толық жазыңыз..."></textarea><div class="field-foot"><p class="error" id="message-error"></p><span id="char-count">0 / 2000</span></div></div>
+          <label class="switch-row"><input type="checkbox" id="anonymous" name="anonymous" checked><span class="switch" aria-hidden="true"></span><span><strong>Анонимді жіберу</strong><small>Жеке деректеріңіз сұралмайды</small></span></label>
+          <div id="identity-fields" class="identity-fields" hidden>
+            <div class="field-grid three">
+              <div class="field"><label for="full-name">Аты-жөні <span>*</span></label><input id="full-name" name="fullName" autocomplete="name"><p class="error" id="full-name-error"></p></div>
+              <div class="field"><label for="group">Тобы <span>*</span></label><input id="group" name="group" autocomplete="organization-title"><p class="error" id="group-error"></p></div>
+              <div class="field"><label for="email">Жауап алуға арналған email <span>*</span></label><input id="email" name="email" type="email" autocomplete="email"><p class="error" id="email-error"></p></div>
+            </div>
+          </div>
+          <div id="form-notice" class="form-notice" tabindex="-1" hidden></div>
+          <button class="button primary submit-button" type="submit">Жіберу <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="documents">
+      <div class="container section-heading reveal"><p class="eyebrow">Студентке пайдалы</p><h2>Маңызды құжаттар</h2><p>Ресми ережелер, күнтізбе және университет ресурстары.</p></div>
+      <div class="container cards-grid documents-grid" id="documents-grid"></div>
+    </section>
+
+    <section class="section social-section">
+      <div class="container section-heading reveal"><p class="eyebrow">Әлеуметтік желі</p><h2>Instagram парақшалары</h2><p>Университет өміріндегі жаңалықтар мен хабарландыруларды бақылаңыз.</p></div>
+      <div class="container cards-grid social-grid" id="social-grid"></div>
+    </section>
+
+    <section class="section contacts-section" id="contacts">
+      <div class="container contact-panel reveal">
+        <div class="contact-intro"><p class="eyebrow light">Байланыс</p><h2>Бізбен байланысыңыз</h2><p>Факультет деканатының байланыс деректері</p></div>
+        <div class="contact-list" id="contact-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div class="footer-brand"><span class="mini-mark">ЖҒ</span><div><strong data-university></strong><span data-faculty></span></div></div><a href="#top">Жоғарыға ↑</a></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
